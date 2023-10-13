@@ -39,7 +39,7 @@ h2{
     background-color:none ;
 }
 /* scroll through lists */
-.todos-container{
+.list-container{
     overflow-y: scroll;
 }
 .todo-item-container{

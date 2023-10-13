@@ -2,30 +2,22 @@
 // setup textBox that receives input,addbutton that adds to todo List, and container shows previous input
 const textBox = document.querySelector('#text-box');
 const addButton = document.querySelector('#add-button');
-const todosContainer = document.querySelector('.todos-container');
+const listContainer = document.querySelector('.list-container');
 
-function checkInput(input){
-    if(input.trim() === ""){
-        throw new Error("Input cannot be Empty");
-    }
-}
 
 addButton.addEventListener('click', ()=>{
     try{
         if(textBox.value.trim() === '')
         {
-            throw new Error("Input dont right");
+            throw new Error("Input not right");
         }
-
-    // if(textBox.value.trim().length == ' ')
-    // return;
 
         //create div add class todo-item-container
         const todoItemContainer = document.createElement('div');
         todoItemContainer.classList.add('todo-item-container');
 
-        //add the todo-item-container to the todos container
-        todosContainer.appendChild(todoItemContainer);
+        //add the todo-item-container to the list container
+        listContainer.appendChild(todoItemContainer);
 
         //create p element add id = todo-text
         const todoText = document.createElement('p');
